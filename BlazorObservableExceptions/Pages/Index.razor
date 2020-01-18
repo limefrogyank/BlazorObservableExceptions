@@ -1,0 +1,19 @@
+﻿@inherits ReactiveUI.Blazor.ReactiveComponentBase<ViewModels.MainViewModel>
+@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@if (ViewModel != null)
+{
+    <button @onclick=@(()=> ViewModel.TestCommand.Execute().Subscribe())>Test Exception Handling</button>
+}
+
+@code { 
+
+    protected override void OnInitialized()
+    {
+        ViewModel = new ViewModels.MainViewModel();
+    }
+}
