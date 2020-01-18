@@ -20,7 +20,7 @@ namespace BlazorObservableExceptions.ViewModels
             });
 
             TestCommand.ThrownExceptions.Subscribe(error =>
-            {
+            {                
                 Debug.WriteLine($"The error was caught! ({error.Message})");
             });
         }
